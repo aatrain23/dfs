@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DFS Live</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+:root{--bg:#0c0d1c;--bg2:#14152b;--surface:#1a1b33;--surface2:#222440;--fg:#f4f6fb;--muted:#9aa3b8;--line:#2c2e52;--accent:#ff8a3d;--golf:#3ddc84;color-scheme:dark;
+  --display:"Bebas Neue","Barlow Condensed","Arial Narrow",system-ui,sans-serif;--cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:light){:root{--bg:#f1f2f8;--bg2:#e7e9f4;--surface:#fff;--surface2:#f6f7fb;--fg:#12132a;--muted:#565d74;--line:#d9dcea;--accent:#c2410c;--golf:#15803d;color-scheme:light}}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font-family:var(--body);line-height:1.5;
+  background:radial-gradient(120% 60% at 50% -10%,color-mix(in srgb,var(--accent) 18%,var(--bg2)) 0%,var(--bg) 55%) fixed,var(--bg)}
+.wrap{max-width:660px;margin:0 auto;padding:28px max(14px,env(safe-area-inset-right,0px)) 56px max(14px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--display);font-weight:400;font-size:64px;line-height:.9;margin:0;letter-spacing:.02em}
+p.sub{margin:0;color:var(--muted)}
+.cards{display:grid;gap:14px}
+a.card{position:relative;display:block;text-decoration:none;color:inherit;background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px 22px;overflow:hidden;transition:border-color .2s,transform .2s}
+a.card::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--c)}
+a.card:hover,a.card:focus-visible{border-color:color-mix(in srgb,var(--c) 60%,var(--line));transform:translateY(-1px);outline:none}
+.card .tag{font-family:var(--cond);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--c)}
+.card h2{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;margin:4px 0 6px;letter-spacing:.02em}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .go{position:absolute;right:18px;top:18px;font-family:var(--cond);font-weight:700;color:var(--c);font-size:15px}
+footer{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--cond);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+footer a{color:var(--muted);text-decoration:none} footer a:hover{color:var(--fg)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">FanDuel DFS · live</div>
+    <h1>DFS Live</h1>
+    <p class="sub">Your entered lineups, scored live.</p>
+  </header>
+  <div class="cards">
+    <a class="card" href="stackline.html" style="--c:var(--accent)">
+      <span class="go">Open →</span>
+      <div class="tag">NFL · StackLine</div>
+      <h2>NFL Lineups</h2>
+      <p>Main slate and primetime showdown lineups, scored from ESPN box scores every 30 seconds, with cash lines and past weeks.</p>
+    </a>
+    <a class="card" href="golf.html" style="--c:var(--golf)">
+      <span class="go">Open →</span>
+      <div class="tag">PGA Tour · CourseFit</div>
+      <h2>Golf Lineups</h2>
+      <p>Fairway Live: this week's golf lineups on the live leaderboard, with the projected cut line and each entry's buy-in.</p>
+    </a>
+  </div>
+  <footer>
+    <a href="https://aatrain23.github.io/prop-card/nfl.html">Prop card</a>
+    <a href="https://aatrain23.github.io/prop-card/lines.html">Line shop</a>
+    <a href="https://aatrain23.github.io/atrains-games/">Games</a>
+  </footer>
+</div>
+</body>
+</html>
